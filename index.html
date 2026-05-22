@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío: Simuladores Interactivos Avanzados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Desafío Técnico de Programación Web</h1>
+        <p>Desarrollo de Simuladores Interactivos con Lógica Matemática</p>
+    </header>
+
+    <main class="container">
+        
+        <section class="card card-calor">
+            <div class="card-header">
+                <h2>1. Ley de Enfriamiento de Newton</h2>
+                <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=300&auto=format&fit=crop" alt="Termodinámica" class="card-img">
+            </div>
+            <p class="description">Calcula de forma exacta la temperatura final de un objeto tras transcurrir un tiempo determinado en un entorno constante.</p>
+            
+            <form id="form-calor">
+                <div class="form-group">
+                    <label for="t0">Temperatura inicial (T₀) en °C:</label>
+                    <input type="number" id="t0" value="120" step="any" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="ts">Temperatura del entorno (T_s) en °C:</label>
+                    <input type="number" id="ts" value="38" step="any" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="k">Constante de enfriamiento (k):</label>
+                    <input type="number" id="k" value="0.45" step="any" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tiempo">Tiempo (t) en horas:</label>
+                    <input type="number" id="tiempo" value="3" step="any" min="0" required>
+                </div>
+                
+                <button type="button" id="btn-calor" class="btn-calor-style">Calcular Temperatura</button>
+            </form>
+            
+            <div class="resultado-box res-calor-style" id="res-calor">
+                Resultado: Esperando datos...
+            </div>
+        </section>
+
+        <section class="card card-comb">
+            <div class="card-header">
+                <h2>2. Calculador de Combinaciones Complejas</h2>
+                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=300&auto=format&fit=crop" alt="Matemáticas y Probabilidad" class="card-img">
+            </div>
+            <p class="description">Cálculo probabilístico simultáneo para dos grupos independientes mediante fórmulas factoriales iterativas avanzadas.</p>
+            
+            <form id="form-combinaciones">
+                <div class="grupo-container-1">
+                    <h3>Grupo de Selección 1</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="n1">Elementos (n₁):</label>
+                            <input type="number" id="n1" value="59" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="r1">Elegidos (r₁):</label>
+                            <input type="number" id="r1" value="5" min="0" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grupo-container-2">
+                    <h3>Grupo de Selección 2</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="n2">Elementos (n₂):</label>
+                            <input type="number" id="n2" value="35" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="r2">Elegidos (r₂):</label>
+                            <input type="number" id="r2" value="1" min="0" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="button" id="btn-combinaciones" class="btn-comb-style">Calcular Combinaciones</button>
+            </form>
+            
+            <div class="resultado-box res-comb-style" id="res-combinaciones">
+                Resultado: Esperando datos...
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Plataforma de Simuladores Web Matemáticos</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

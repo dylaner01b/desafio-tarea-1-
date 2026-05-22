@@ -1,0 +1,225 @@
+/* RESET GENERAL DEL BOX MODEL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #D0E6A5; /* Tu color verde limón para los costados */
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: 40px auto;
+    /* Añadimos un sutil sombreado extra a los bloques para que 
+       se despeguen elegantemente del fondo limón */
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.05));
+}
+
+/* HEADER CON DEGRADADO LLAMATIVO */
+header {
+    background: linear-gradient(135deg, #0f172a 0%, #2563eb 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 5px solid #00f2fe;
+}
+
+header h1 {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 15px;
+    color: #cbd5e1;
+}
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: 40px auto;
+}
+
+/* DISEÑO DE TARJETAS DIFERENCIADAS POR COLOR */
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    overflow: hidden; /* Control estricto del box model interno */
+}
+
+/* Identidad Ejercicio 1 (Tono Cálido / Fuego) */
+.card-calor {
+    border-top: 6px solid #ea580c;
+    background-color: #fffaf8;
+}
+
+/* Identidad Ejercicio 2 (Tono Frío / Datos / Algoritmos) */
+.card-comb {
+    border-top: 6px solid #7c3aed;
+    background-color: #faf8ff;
+}
+
+/* ESTRUCTURA DE CABECERA INTERNA CON IMAGEN */
+.card-header {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.card-calor h2 { color: #c2410c; }
+.card-comb h2 { color: #6d28d9; }
+
+/* Configuración de imágenes dinámicas por enlace */
+.card-img {
+    display: block;
+    width: 100%;
+    max-height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #e2e8f0;
+}
+
+.description {
+    font-size: 14px;
+    color: #475569;
+    margin-bottom: 25px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px dashed #cbd5e1;
+}
+
+/* FORMULARIOS Y SU ALINEACIÓN */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.grupo-container-1, .grupo-container-2 {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+.card-comb h3 { color: #5b21b6; }
+
+.form-row .form-group {
+    display: inline-block;
+    width: 48%;
+    margin-right: 3%;
+    vertical-align: top;
+}
+
+.form-row .form-group:last-child {
+    margin-right: 0;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #334155;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #1e293b;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+/* Efectos focus diferenciados */
+.card-calor input[type="number"]:focus {
+    border-color: #ea580c;
+    outline: none;
+}
+
+.card-comb input[type="number"]:focus {
+    border-color: #7c3aed;
+    outline: none;
+}
+
+/* BOTONES PERSONALIZADOS */
+button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-calor-style { background-color: #ea580c; }
+.btn-calor-style:hover { background-color: #c2410c; }
+
+.btn-comb-style { background-color: #7c3aed; }
+.btn-comb-style:hover { background-color: #6d28d9; }
+
+/* CAJAS DE RESULTADO DE ALTO IMPACTO VISUAL */
+.resultado-box {
+    margin-top: 25px;
+    padding: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+/* Estados iniciales/exitosos por defecto */
+.res-calor-style {
+    background-color: #ffedd5;
+    border-color: #fed7aa;
+    color: #9a3412;
+}
+
+.res-comb-style {
+    background-color: #f3e8ff;
+    border-color: #e9d5ff;
+    color: #5b21b6;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    text-align: center;
+    padding: 25px;
+    font-size: 13px;
+    color: #94a3b8;
+    background-color: #0f172a;
+    margin-top: 50px;
+    border-top: 4px solid #7c3aed;
+}
